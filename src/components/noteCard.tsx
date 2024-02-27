@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 
 interface NoteCArdProps {
   note: {
+    id: string;
     date: Date;
     context: string;
   };
@@ -19,7 +20,9 @@ export function NoteCard({ note }: NoteCArdProps) {
             {formatDistanceToNow(note.date, { locale: ptBR, addSuffix: true })}
           </span>
 
-          <p className="text-sm text-slate-400">{note.context}</p>
+          <p className="text-sm text-slate-400 overflow-hidden text-nowrap text-ellipsis">
+            {note.context}
+          </p>
 
           <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/60 to-black/0 pointer-events-none" />
         </button>
