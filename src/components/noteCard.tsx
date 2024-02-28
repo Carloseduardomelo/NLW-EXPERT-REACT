@@ -29,7 +29,7 @@ export function NoteCard({ note }: NoteCArdProps) {
       </dialog.Trigger>
       <dialog.Portal>
         <dialog.Overlay className="fixed inset-0 bg-black/50" />
-        <dialog.Content className=" z-50 fixed overflow-hidden left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[640px] w-full h-[60vh] bg-slate-700 rounded-md flex flex-col outline-none">
+        <dialog.Content className="fixed overflow-hidden inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[60vh] bg-slate-700 md:rounded-md flex flex-col outline-none">
           <dialog.Close className="absolute right-0 top-0 p-1.5">
             <X className="w-6 h-6 text-slate-400 hover:text-slate-100" />
           </dialog.Close>
